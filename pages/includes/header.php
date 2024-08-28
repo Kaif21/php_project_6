@@ -29,7 +29,7 @@
 
 </head>
 
-<body class="bg-white">
+<body class="bg-body-tertiary">
     <!-- top nav -->
     <div class="topNav bg-secondary-subtle">
         <div class="container py-1">
@@ -91,8 +91,8 @@
             </div>
         </div>
     </div>
-   <!-- main nav-->
-   <div class="mainNav bg-body-secondary py-2">
+    <!-- main nav-->
+    <div class="mainNav bg-body-secondary py-2">
         <div class="container">
             <div class="row">
                 <div class="col-md-9 text-center">
@@ -109,22 +109,23 @@
                             <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
                                 <ul class="navbar-nav fs-6 fw-bold ">
                                     <li class="nav-item my-auto">
-                                        <a class="nav-link text-black" aria-current="page" href="route.php?page=home">HOME</a>
+                                        <a class="nav-link text-dark" aria-current="page"
+                                            href="route.php?page=home">HOME</a>
                                     </li>
                                     <li class=" nav-item">
-                                            <a class="nav-link text-black" href="route.php?page=courses">ALL COURSES</a>
+                                        <a class="nav-link text-dark" href="route.php?page=courses">ALL COURSES</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-black" href="route.php?page=pgd">PGD</a>
+                                        <a class="nav-link text-dark" href="route.php?page=pgd">PGD</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-black" href="route.php?page=assessment">ASSESSMENT</a>
+                                        <a class="nav-link text-dark" href="route.php?page=assessment">ASSESSMENT</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-black" href="route.php?page=about">ABOUT US</a>
+                                        <a class="nav-link text-dark" href="route.php?page=about">ABOUT US</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-black" href="route.php?page=contact">CONTACT US</a>
+                                        <a class="nav-link text-dark" href="route.php?page=contact">CONTACT US</a>
                                     </li>
                                 </ul>
                             </div>
