@@ -1,5 +1,5 @@
-    <!-- footer -->
-    <footer class="text-center text-lg-start  text-muted">
+ <!-- footer -->
+ <footer class="text-center text-lg-start  text-muted">
         <div class="container">
             <div class="row my-5">
                 <div class="col-md-12"><img
