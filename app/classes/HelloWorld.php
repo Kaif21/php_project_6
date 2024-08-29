@@ -5,7 +5,7 @@ use App\classes\CourseList;
 
 class HelloWorld{
 
-    public $message,$course,$courses = [];
+    public $message,$course,$courses = [],$randomKeys;
 
 public function __construct()
 {
@@ -20,10 +20,15 @@ public function index(){
 // index
 public function contact(){
     return view('contact');
+    
 }
 //contact
 public function about(){
-    return view('about');
+    $this->course = new CourseList();
+    $this->courses = $this->course->getAllCourse();
+    $this->randomKeys = array_rand($this->courses, 4);
+    $randomCourses = array_intersect_key($this->courses, array_flip($this->randomKeys));
+    return view('about', ['courses' => $randomCourses]);
 }
 //about
 };

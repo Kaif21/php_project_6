@@ -29,7 +29,7 @@
 
 </head>
 
-<body class="bg-body-tertiary">
+<body class="bg-body-tertiary text-dark">
     <!-- top nav -->
     <div class="topNav bg-secondary-subtle">
         <div class="container py-1">
@@ -125,7 +125,17 @@
                                         <a class="nav-link text-dark" href="route.php?page=about">ABOUT US</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" href="route.php?page=contact">CONTACT US</a>
+                                        <!-- <a class="nav-link text-dark" href="route.php?page=contact">CONTACT US</a> -->
+                                        <div class="btn-group dropend">
+                                            <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Dropend
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>sa`s</li>
+                                                <li>sdds</li>
+                                                <li>dsd</li>
+                                            </ul>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>
