@@ -5,7 +5,7 @@ use App\classes\CourseList;
 
 class HelloWorld{
 
-    public $message,$course,$courses = [],$randomKeys;
+    public $message,$course,$courses = [],$randomKeys,$singleDetail;
 
 public function __construct()
 {
@@ -31,8 +31,10 @@ public function about(){
     return view('about', ['courses' => $randomCourses]);
 }
 //about
-public function details(){
-    return view('details');
+public function details($id){
+    $this->course = new CourseList();
+    $this->singleDetail = $this->course->getCourseById($id);
+    return view('details',['course'=> $this->singleDetail]);
 }
 //about
 };

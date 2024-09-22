@@ -14,5 +14,5 @@ elseif($_GET['page'] == 'contact'){
     $helloWorld->contact();
 }
 elseif($_GET['page'] == 'details'){
-    $helloWorld->details();
+    $helloWorld->details($_GET['id']);
 }
