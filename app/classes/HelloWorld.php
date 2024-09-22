@@ -31,5 +31,9 @@ public function about(){
     return view('about', ['courses' => $randomCourses]);
 }
 //about
+public function details(){
+    return view('details');
+}
+//about
 };
 // class

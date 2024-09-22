@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome | BITM Training </title>
     <!-- booststrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- favicon -->
     <link rel="icon" href="https://bitm.org.bd/assets/frontend/images/favicon.png">
     <!-- font -->
@@ -15,21 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- fontawesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.js"></script>
     <!-- internal css -->
-    <style>
-        body {
-            font-family: "Roboto", sans-serif !important;
-            font-weight: 400;
-            font-style: normal;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
 
-<body class="bg-body-tertiary text-dark">
+<body class="bg-body-tertiary">
     <!-- top nav -->
     <div class="topNav bg-secondary-subtle">
         <div class="container py-1">
@@ -121,21 +113,20 @@
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" href="route.php?page=assessment">ASSESSMENT</a>
                                     </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link text-dark" href="route.php?page=about">ABOUT US</a>
+                                    <li class="nav-item dropdown">
+                                            <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                               ABOUT US
+                                            </a>
+
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="route.php?page=about">About us</a></li>
+                                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                            </ul>
+                                       
+                                        <!-- <a class="nav-link text-dark" href="route.php?page=about">ABOUT US</a> -->
                                     </li>
                                     <li class="nav-item">
-                                        <!-- <a class="nav-link text-dark" href="route.php?page=contact">CONTACT US</a> -->
-                                        <div class="btn-group dropend">
-                                            <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Dropend
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li>sa`s</li>
-                                                <li>sdds</li>
-                                                <li>dsd</li>
-                                            </ul>
-                                        </div>
                                     </li>
                                 </ul>
                             </div>

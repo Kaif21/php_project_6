@@ -5,3 +5,7 @@
 
 # Vercel
 .vercel
+#node
+node_modules
+#bootstrap
+/assets/css/bootstrap/css

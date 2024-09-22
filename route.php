@@ -13,3 +13,6 @@ elseif($_GET['page'] == 'about'){
 elseif($_GET['page'] == 'contact'){
     $helloWorld->contact();
 }
+elseif($_GET['page'] == 'details'){
+    $helloWorld->details();
+}
