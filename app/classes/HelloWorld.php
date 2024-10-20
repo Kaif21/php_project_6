@@ -37,5 +37,17 @@ public function details($id){
     return view('details',['course'=> $this->singleDetail]);
 }
 //about
+//login
+public function login(){
+    return view('login');
+    
+}
+//login
+//dashboard
+public function dashboard(){
+    return view('dashboard');
+    
+}
+//dashboard
 };
 // class

@@ -54,20 +54,21 @@
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <form>
+                                <p class="text-danger"><?php echo isset($_GET['message']) ? $_GET['message'] : '';?></p>
+                                <form action="route.php" method="POST">
                                         <div class="mb-3">
                                             <label for="exampleInputEmail1" class="form-label">Email address</label>
                                             <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="yourmail@Bitm.org.bd">
+                                                aria-describedby="emailHelp" placeholder="yourmail@Bitm.org.bd" name="email">
                                         </div>
                                         <div class="mb-3">
                                             <label for="exampleInputPassword1" class="form-label">Password</label>
                                             <input type="password" class="form-control" id="exampleInputPassword1"
-                                                placeholder="Your password">
+                                                placeholder="Your password" name="password">
                                         </div>
                                         <p class="text-end"><a href="#">Forget Password</a></p>
-                                        <!-- submit -->
-                                        <button class="btn btn-primary w-100" type="submit">Log in</button>
+                                        <!-- submit --> 
+                                        <button class="btn btn-primary w-100" type="submit" name="loginBtn" value="login">Log in</button>
                                     </form>
                                 </div>
                                 <div class="modal-footer justify-content-center">

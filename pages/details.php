@@ -62,10 +62,12 @@
         </div>
         <!-- flex container for items -->
         <div class="d-flex flex-wrap justify-content-center gap-2">
+            
             <div class="flex-item">
-                <div class="text-white fs-5 shadow py-2 text-center rounded-pill bg-brand-color">HTML
+                <div class="text-white fs-5 shadow py-2 text-center rounded-pill bg-brand-color"><?php echo $tech['name']; ?>
                 </div>
             </div>
+         
         </div>
     </div>
 </div>
