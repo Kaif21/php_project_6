@@ -61,13 +61,15 @@
             <hr class="w-25 mx-auto">
         </div>
         <!-- flex container for items -->
+        <!-- flex container for items -->
         <div class="d-flex flex-wrap justify-content-center gap-2">
-            
-            <div class="flex-item">
-                <div class="text-white fs-5 shadow py-2 text-center rounded-pill bg-brand-color"><?php echo $tech['name']; ?>
+            <?php foreach ($course['technology'] as $tech): ?>
+                <div class="flex-item">
+                    <div class="text-white fs-5 shadow py-2 text-center rounded-pill bg-brand-color">
+                        <?php echo $tech; ?>
+                    </div>
                 </div>
-            </div>
-         
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
@@ -121,6 +123,7 @@
         </div>
         <div class="col-md-12">
             <div class="accordion module-accordion" id="module-accordion">
+                <?php foreach ($course['modules'] as $index => $module): ?>
                 <div class="module-item border border-2 my-2 p-2 rounded" style="border-color: #8B37FF !important;">
                     <div class="module-header" id="module-heading-1">
                         <h4 class="module-title mb-0">
@@ -128,7 +131,7 @@
                                 data-bs-toggle="collapse" data-bs-target="#module-1" aria-expanded="true"
                                 aria-controls="module-1">
                                 <i class="module-toggle-icon fas fa-minus me-2"></i>
-                                Basics of HTML
+                                <?php echo $module['modules_title']; ?>
                             </a>
                         </h4>
                     </div><!--//card-header-->
@@ -137,176 +140,15 @@
                         <div class="card-body p-0">
                             <div class="module-sub-item p-3">
                                 <ul style="color: #8B37FF;" class="">
-                                    <li>HTML Tags, Attributes,</li>
-                                    <li>HTML Tags, Attributes,</li>
-                                    <li>HTML Tags, Attributes,</li>
-                                    <li>HTML Tags, Attributes,</li>
-                                    <li>HTML Tags, Attributes,</li>
+                                <?php foreach ($module['modules_content'] as $content): ?>
+                                            <li><?php echo $content; ?></li>
+                                        <?php endforeach; ?>
                                 </ul>
                             </div><!--//module-sub-item-->
                         </div><!--//card-body-->
                     </div><!--//module-content-->
                 </div><!--//module-item-->
-
-                <div class="module-item card">
-                    <div class="module-header card-header" id="module-heading-2">
-                        <h4 class="module-title mb-0">
-                            <a class="card-toggle module-toggle" href="#module-2" data-bs-toggle="collapse"
-                                data-bs-target="#module-2" aria-expanded="true" aria-controls="module-2">
-                                <i class="module-toggle-icon fas fa-plus me-2"></i>
-                                Module 2 - Lorem Ipsum Dolor Sit Amet
-                            </a>
-                        </h4>
-                    </div><!--//card-header-->
-
-                    <div id="module-2" class="module-content collapse" aria-labelledby="module-heading-2">
-                        <div class="card-body p-0">
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">2.1</span>Module
-                                        Intro Video</div>
-                                    <div class="col-3 text-end extra-info">02:30</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">2.2</span>Module
-                                        Lorem Ipsum</div>
-                                    <div class="col-3 text-end extra-info">15:20</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">2.3</span>Module
-                                        Suscipit Arcu</div>
-                                    <div class="col-3 text-end extra-info">23:15</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-
-                        </div><!--//card-body-->
-                    </div><!--//module-content-->
-                </div><!--//module-item-->
-
-                <div class="module-item card">
-                    <div class="module-header card-header" id="module-heading-3">
-                        <h4 class="module-title mb-0">
-                            <a class="card-toggle module-toggle" href="#module-3" data-bs-toggle="collapse"
-                                data-bs-target="#module-3" aria-expanded="true" aria-controls="module-3">
-                                <i class="module-toggle-icon fas fa-plus me-2"></i>
-                                Module 3 - Lorem ipsum dolor sit amet.
-                            </a>
-                        </h4>
-                    </div><!--//card-header-->
-
-                    <div id="module-3" class="module-content collapse" aria-labelledby="module-heading-3">
-                        <div class="card-body p-0">
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">3.1</span>Module
-                                        Intro Video</div>
-                                    <div class="col-3 text-end extra-info">02:30</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">3.2</span>Module
-                                        Lorem Ipsum</div>
-                                    <div class="col-3 text-end extra-info">15:20</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">3.3</span>Module
-                                        Suscipit Arcu</div>
-                                    <div class="col-3 text-end extra-info">23:15</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-
-
-                        </div><!--//card-body-->
-                    </div><!--//module-content-->
-                </div><!--//module-item-->
-
-                <div class="module-item card">
-                    <div class="module-header card-header" id="module-heading-4">
-                        <h4 class="module-title mb-0">
-                            <a class="card-toggle module-toggle" href="#module-4" data-bs-toggle="collapse"
-                                data-bs-target="#module-4" aria-expanded="true" aria-controls="module-4">
-                                <i class="module-toggle-icon fas fa-plus me-2"></i>
-                                Module 4 - Lorem ipsum dolor sit amet.
-                            </a>
-                        </h4>
-                    </div><!--//card-header-->
-
-                    <div id="module-4" class="module-content collapse" aria-labelledby="module-heading-4">
-                        <div class="card-body p-0">
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">4.1</span>Module
-                                        Intro Video</div>
-                                    <div class="col-3 text-end extra-info">02:30</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">4.2</span>Module
-                                        Lorem Ipsum</div>
-                                    <div class="col-3 text-end extra-info">15:20</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">4.3</span>Module
-                                        Suscipit Arcu</div>
-                                    <div class="col-3 text-end extra-info">23:15</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-
-
-                        </div><!--//card-body-->
-                    </div><!--//module-content-->
-                </div><!--//module-item-->
-
-                <div class="module-item card">
-                    <div class="module-header card-header" id="module-heading-5">
-                        <h4 class="module-title mb-0">
-                            <a class="card-toggle module-toggle" href="#module-5" data-bs-toggle="collapse"
-                                data-bs-target="#module-5" aria-expanded="true" aria-controls="module-5">
-                                <i class="module-toggle-icon fas fa-plus me-2"></i>
-                                Module 5 - Lorem ipsum dolor sit amet.
-                            </a>
-                        </h4>
-                    </div><!--//card-header-->
-
-                    <div id="module-5" class="module-content collapse" aria-labelledby="module-heading-5">
-                        <div class="card-body p-0">
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">5.1</span>Module
-                                        Intro Video</div>
-                                    <div class="col-3 text-end extra-info">02:30</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">5.2</span>Module
-                                        Lorem Ipsum</div>
-                                    <div class="col-3 text-end extra-info">15:20</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-                            <div class="module-sub-item p-3">
-                                <div class="row justify-content-between">
-                                    <div class="col-9"><span class="theme-text-secondary me-2">5.3</span>Module
-                                        Suscipit Arcu</div>
-                                    <div class="col-3 text-end extra-info">23:15</div>
-                                </div>
-                            </div><!--//module-sub-item-->
-
-
-                        </div><!--//card-body-->
-                    </div><!--//module-content-->
-                </div><!--//module-item-->
-
+                <?php endforeach; ?>
             </div>
         </div>
     </div>

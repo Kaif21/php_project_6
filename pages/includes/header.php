@@ -27,7 +27,7 @@
         <div class="container py-1">
             <div class="row">
                 <div class="col-md-6 my-auto">
-                    <div class="d-flex ">
+                    <div class="d-flex">
                         <div><a href="tel:+8809612342486" class="mx-2 fs-6 text-decoration-none text-dark"><i
                                     class="fa-solid fa-phone me-1 "></i> +8809612342486</a>
                         </div>
@@ -35,52 +35,69 @@
                                     class="fa-solid fa-envelope me-1"></i>info@bitm.org.bd</a></div>
                     </div>
                 </div>
+
                 <div class="col-md-6">
-                    <!-- Button trigger modal -->
-                    <div class="text-end">
-                        <button type="button" class="btn btn-primary rounded-pill py-1 px-3" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop">
-                            Sign in
-                        </button>
-                    </div>
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                <p class="text-danger"><?php echo isset($_GET['message']) ? $_GET['message'] : '';?></p>
-                                <form action="route.php" method="POST">
-                                        <div class="mb-3">
-                                            <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                                aria-describedby="emailHelp" placeholder="yourmail@Bitm.org.bd" name="email">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="exampleInputPassword1" class="form-label">Password</label>
-                                            <input type="password" class="form-control" id="exampleInputPassword1"
-                                                placeholder="Your password" name="password">
-                                        </div>
-                                        <p class="text-end"><a href="#">Forget Password</a></p>
-                                        <!-- submit --> 
-                                        <button class="btn btn-primary w-100" type="submit" name="loginBtn" value="login">Log in</button>
-                                    </form>
-                                </div>
-                                <div class="modal-footer justify-content-center">
+                    <div class="d-flex justify-content-end gap-3">
+                        <?php
 
-                                    Not registered? To register click <a href="#">here</a>.
+                        if (isset($_SESSION['id'])) {
+                        ?>
+                            <!-- Button trigger modal -->
+                            <div>
+                                <a href="route.php?page=logout"> <button type="button" class="btn btn-danger rounded-pill py-1 px-3">
+                                        Log out
+                                    </button>
+                                </a>
+                            </div>
+                        <?php } else { ?>
 
+                            <div>
+                                <button type="button" class="btn btn-primary rounded-pill py-1 px-3" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">
+                                    Sign in
+                                </button>
+                            </div>
+                        <?php }
+                        ?>
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-danger"><?php echo isset($_GET['message']) ? $_GET['message'] : ''; ?></p>
+                                        <form action="route.php" method="POST">
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="yourmail@Bitm.org.bd" name="email">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                                    placeholder="Your password" name="password">
+                                            </div>
+                                            <p class="text-end"><a href="#">Forget Password</a></p>
+                                            <!-- submit -->
+                                            <button class="btn btn-primary w-100" type="submit" name="loginBtn" value="login">Log in</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer justify-content-center">
+
+                                        Not registered? To register click <a href="#">here</a>.
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
@@ -112,19 +129,19 @@
                                         <a class="nav-link text-dark" href="route.php?page=pgd">PGD</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link text-dark" href="route.php?page=assessment">ASSESSMENT</a>
+                                        <a class="nav-link text-dark" href="route.php?page=assesment">ASSESSMENT</a>
                                     </li>
                                     <li class="nav-item dropdown">
-                                            <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                               ABOUT US
-                                            </a>
+                                        <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            ABOUT US
+                                        </a>
 
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="route.php?page=about">About us</a></li>
-                                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            </ul>
-                                       
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="route.php?page=about">About us</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+
                                         <!-- <a class="nav-link text-dark" href="route.php?page=about">ABOUT US</a> -->
                                     </li>
                                     <li class="nav-item">

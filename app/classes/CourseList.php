@@ -22,7 +22,8 @@ class CourseList
                 'schedule_day' => 'Sat ,Mon ,Wednesday',
                 'schedule_time' => '9 AM',
                 'technology' => [
-                    'name' => 'HTML',
+                    0 => 'HTML',
+                    1 => 'css'
                 ],
                 'videos' => '108',
                 'resources' => '108',
@@ -71,17 +72,14 @@ class CourseList
                 'schedule_day' => 'Mon ,Thu ,Saturday',
                 'schedule_time' => '7 PM',
                 'technology' => [
-                    'name' => 'JavaScript',
+                    1 => 'JavaScript',
                 ],
                 'videos' => '120',
                 'resources' => '130',
                 'projects' => '110',
                 'teacher_name' => 'MD. RASHED KARIM',
                 'teacher_img' => 'https://bitm.org.bd/assets/media/trainer_photo/1618732479.jpg',
-                'teacher_details' => 'Experienced Head Of Software with a demonstrated history of working in the education and software industry. Strong engineering professional skilled in Project Management, Software Testing, Different Databases, Software Architecture, Programming Languages like Java, PHP, Spring Framework, Hibernate. 
-
-Degree: Doctor of Philosophy in Computer Engineering
-Institution: Universiti Malaysia Perlis',
+                'teacher_details' => 'Experienced Head Of Software with a demonstrated history of working in the education and software industry. Strong engineering professional skilled in Project Management, Software Testing, Different Databases, Software Architecture, Programming Languages like Java, PHP, Spring Framework, Hibernate. Degree: Doctor of Philosophy in Computer EngineeringInstitution: Universiti Malaysia Perlis',
                 'modules' => [
                     0 => [
                         'modules_title' => 'ES6+ Features',
@@ -112,7 +110,7 @@ Institution: Universiti Malaysia Perlis',
                 'schedule_day' => 'Tue ,Fri ,Sunday',
                 'schedule_time' => '6 PM',
                 'technology' => [
-                    'name' => 'Python',
+                    1 => 'Python',
                 ],
                 'videos' => '130',
                 'resources' => '150',
@@ -159,7 +157,7 @@ Institution: Universiti Malaysia Perlis',
                 'schedule_day' => 'Tue ,Fri ,Sunday',
                 'schedule_time' => '6 PM',
                 'technology' => [
-                    'name' => 'Python',
+                    1 => 'Python',
                 ],
                 'videos' => '130',
                 'resources' => '150',
@@ -194,7 +192,7 @@ Institution: Universiti Malaysia Perlis',
                 ]
             ],
             4 => [
-                'id' => 3,
+                'id' => 4,
                 'title' => 'Data Science Fundamentals',
                 'description' => 'Introduction to data analysis, visualization, and machine learning with Python.',
                 'duration' => '1 Oct - 1 Feb',
@@ -206,7 +204,8 @@ Institution: Universiti Malaysia Perlis',
                 'schedule_day' => 'Tue ,Fri ,Sunday',
                 'schedule_time' => '6 PM',
                 'technology' => [
-                    'name' => 'Python',
+                    1 => 'Python',
+                    2 => 'HTMl',
                 ],
                 'videos' => '130',
                 'resources' => '150',

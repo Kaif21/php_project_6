@@ -5,14 +5,15 @@ use App\classes\CourseList;
 
 class HelloWorld{
 
-    public $message,$course,$courses = [],$randomKeys,$singleDetail;
+    public $course,$courses = [],$randomKeys,$singleDetail;
 
 public function __construct()
 {
-    $this->message = "hello World";
+    session_start();
 }
 // __construct
 public function index(){
+
     $this->course = new CourseList();
     $this->courses = $this->course->getAllCourse();
     return view('home', ['course'=>$this->courses]);
@@ -20,7 +21,6 @@ public function index(){
 // index
 public function contact(){
     return view('contact');
-    
 }
 //contact
 public function about(){
@@ -37,6 +37,18 @@ public function details($id){
     return view('details',['course'=> $this->singleDetail]);
 }
 //about
+// assesment
+public function assesment(){
+    if(isset($_SESSION['id'])){
+        return view('assesment');
+    } else {
+
+        header('location:route.php?page=home&message=Please login to view assessment');
+        exit();
+    }
+}
+
+//assesment
 //login
 public function login(){
     return view('login');
